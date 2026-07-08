@@ -1,0 +1,240 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#ffe4ec,#fff4f8,#ffeaf2);
+    overflow-x:hidden;
+    color:#6b3b52;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    text-align:center;
+}
+
+h1{
+    font-family:'Dancing Script',cursive;
+    font-size:70px;
+    color:#ff4f8b;
+    margin-bottom:15px;
+}
+
+h2{
+    font-family:'Dancing Script',cursive;
+    font-size:48px;
+    color:#ff6b9d;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:700px;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.hero{
+    position:relative;
+}
+
+.subtitle{
+    margin-top:20px;
+    font-size:20px;
+}
+
+.scroll{
+    margin-top:40px;
+    animation:bounce 1.8s infinite;
+    font-size:22px;
+    color:#ff6b9d;
+}
+
+@keyframes bounce{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(10px);
+}
+
+}
+
+.letter{
+
+background:#fff8fb;
+
+}
+
+.letter p{
+
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(255,105,180,.15);
+
+}
+
+.gift{
+
+background:#ffeff6;
+
+}
+
+.gift-box{
+
+font-size:120px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.gift-box:hover{
+
+transform:scale(1.15) rotate(-8deg);
+
+}
+
+#giftMessage{
+
+margin-top:30px;
+font-size:22px;
+font-weight:600;
+color:#ff4f8b;
+
+}
+
+.cake{
+
+background:#fff8fb;
+
+}
+
+.cake-emoji{
+
+font-size:130px;
+animation:floatCake 3s ease-in-out infinite;
+
+}
+
+@keyframes floatCake{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.notes{
+    background:#ffeef5;
+}
+
+.notes .card{
+    width:320px;
+    background:white;
+    margin:15px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(255,105,180,.15);
+    transition:.4s;
+    font-size:18px;
+}
+
+.notes .card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.ending{
+    background:linear-gradient(180deg,#ffdbe8,#ffeef6);
+}
+
+.ending p{
+    font-size:20px;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:999;
+}
+
+.heart{
+    position:absolute;
+    bottom:-30px;
+    font-size:22px;
+    animation:fly linear forwards;
+}
+
+@keyframes fly{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:50px;
+}
+
+h2{
+    font-size:38px;
+}
+
+p{
+    font-size:16px;
+}
+
+.notes .card{
+    width:90%;
+}
+
+.gift-box{
+    font-size:90px;
+}
+
+.cake-emoji{
+    font-size:100px;
+}
+
+}
